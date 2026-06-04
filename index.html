@@ -1,105 +1,168 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es" class="">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portafolio profesional de [Tu Nombre]">
-   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Lora:ital,wght@0,400..700;1,400..700&display=swap"> 
-    <link rel="stylesheet" href="css/style.css">
-    <title>Portafolio-Personal</title>
+    <title>Sharon Zeledón | Inicio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+
+            darkMode: 'class',
+
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        marca: {
+                            gradientStart: '#EC4899',
+                            gradientEnd: '#F9A8D4',
+                            textoOscuro: '#4A044E',
+                            textoClaro: '#C026D3'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
 </head>
 
-<body>
+<body class="bg-pink-100 dark:bg-slate-900 flex items-center justify-center min-h-screen p-6 font-sans transition-colors duration-500">
 
-    <!--    Encabezado principal del sitio -->
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#sobre-mi">Sobre Mi</a></li>
-                <li><a href="#proyectos">Proyectos</a></li>
-                <li><a href="#habilidades">Habilidades</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <!-- Seccion de bienvenida o introduccion -->
-        <section id="inicio">
-            <h1>Hola, soy Sharon Zeledon.</h1>
-            <p>Estudiante de Desarrollo de Software y amante de la tecnología.</p>
-            <p>Bienvenido a mi portafolio personal, donde comparto mis proyectos, habilidades y experiencia en el mundo del desarrollo web.</p>
-            <p>Transformando ideas en experiencias web.</p>
-        </section>
+    <!-- Botón modo oscuro -->
+    <button
+        id="theme-toggle"
+        class="fixed top-5 right-5 bg-white dark:bg-slate-800 dark:text-white px-4 py-2 rounded-xl shadow-lg hover:scale-105 transition">
+        🌙
+    </button>
 
-        <!-- Seccion de biografia -->
-        <section id="sobre-mi">
-            <h2>Sobre Mi</h2>
-            <p>Soy Sharon Zeledón, tengo 20 años y soy de El Salvador. Me apasiona el desarrollo web y 
-                la tecnología en general. Actualmente curso un Técnico en Desarrollo de Software en la
-                 Universidad Tecnológica de El Salvador, donde continúo fortaleciendo mis habilidades y 
-                 aprendiendo nuevas tecnologías.</p>
-        </section>
+    <!-- Tarjeta Principal -->
+    <div class="relative w-full max-w-sm bg-white dark:bg-slate-800 rounded-3xl shadow-xl overflow-hidden transform transition duration-500 hover:scale-105 hover:shadow-2xl">
 
-        <!-- Seccion de proyectos (Agrupando articulos individuales) -->
-        <section id="proyectos">
-            <h2>Mis Proyectos</h2>
-            
-            <article>
-                <h3>Origen del Manga</h3>
-                <p>Proyecto web informativo sobre la historia y evolución del manga japonés, incluyendo sus géneros,
-                    autores más influyentes y su impacto en la cultura popular.
-                    Tecnologías utilizadas: HTML, CSS y JavaScript.</p>
-                <a href="https://drive.google.com/drive/folders/1pULPrbVVPDgOSExFcw3nTpZM1Wmuc0Jw?usp=drive_link">Ver Proyecto</a>
-            </article>
+        <!-- Cabecera -->
+        <div class="h-32 bg-gradient-to-r from-marca-gradientStart to-marca-gradientEnd relative">
 
-            <article>
-                <h3>Plataforma de Seguimiento de Prácticas Profesionales</h3>
-                <p>En esta plataforma los docentes pueden agregar las horas de los alumnos que hacían sus practicas profecionales 
-                    y los alumnos puden agregar las evidencias de sus practicas
-                    Tecnologias utilizadas: PHP y MySQL.</p>
-                <a href="https://github.com/sharomzm/Plataforma-de-Seguimiento-de-Pr-cticas-Profesionales">Ver Proyecto</a>
-            </article>
+            <span class="absolute top-4 right-4 bg-emerald-500/20 text-emerald-400 text-xs font-semibold px-2.5 py-1 rounded-full border border-emerald-500/30 backdrop-blur-sm">
+                Disponible
+            </span>
 
-        </section>
-
-        <!-- Seccion de habilidades -->
-        <section id="habilidades">
-            <h2>Habilidades</h2>
-            <ul>
-                <li>HTML5 & CSS3</li>
-                <li>JavaScript (ES6+)</li>
-                <li>React / Vue / Angular</li>
-                <li>Git & GitHub</li>
-            </ul>
-        </section>
-
-        <!-- Seccion de contacto -->
-        <section id="contacto">
-            <h2>Contacto</h2>
-            <form action="#" method="POST">
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" required>
-
-                <label for="email">Correo Electrónico:</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="mensaje">Mensaje:</label>
-                <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
-
-                <button type="submit">Enviar</button>
-            </form>
-        </section>  
-    </main>
-
-    <!--    Pie de pagina (informacion de copyright y redes sociales)  -->
-    <footer>
-        <p>&copy; 2026 Sharon Zeledon. Todos los derechos reservados.</p>
-        <div class="redes-sociales">
-            <a href="https://www.linkedin.com/in/sharon-melany-zeledon-maravilla-726a67381?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">LinkedIn</a>
-            <a href="https://github.com/sharomzm">GitHub</a>
-            <a href="https://www.instagram.com/smzm.vibes?utm_source=qr&igsh=Zm1nd3l4Zm11NDBu">Instagram</a>
         </div>
-    </footer>
+
+        <!-- Avatar -->
+        <div class="absolute top-16 left-1/2 transform -translate-x-1/2">
+
+            <div class="w-28 h-28 bg-white p-1.5 rounded-full shadow-lg">
+
+                <div class="w-full h-full rounded-full bg-gradient-to-br from-indigo-100 to-purple-100 flex items-center justify-center border border-indigo-200">
+
+                    <img
+                        src="img/logoSharon.jpeg"
+                        alt="Avatar"
+                        class="w-full h-full object-cover rounded-full">
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Contenido -->
+        <div class="pt-20 pb-8 px-8 text-center">
+
+            <h2 class="text-2xl font-bold bg-gradient-to-r from-pink-500 to-fuchsia-500 bg-clip-text text-transparent tracking-tight">
+                Sharon Zeledón
+            </h2>
+
+            <p class="text-sm font-semibold text-marca-textoClaro dark:text-pink-300 mt-1 uppercase tracking-wider">
+                Estudiante de Desarrollo Web
+            </p>
+
+            <p class="text-slate-500 dark:text-slate-300 text-sm mt-4 leading-relaxed">
+                Apasionada por la tecnología, construyendo interfaces hermosas y funcionales usando HTML, CSS, JavaScript y Tailwind CSS.
+            </p>
+
+            <!-- Habilidades -->
+            <div class="mt-6">
+
+                <h3 class="text-xs font-bold text-slate-400 dark:text-slate-300 uppercase tracking-widest text-left mb-3">
+                    Habilidades
+                </h3>
+
+                <div class="flex flex-wrap gap-2 justify-start">
+
+                    <span class="px-3 py-1 bg-indigo-50 text-indigo-600 text-xs font-semibold rounded-full border border-indigo-100 transition-colors hover:bg-indigo-100 cursor-pointer">
+                        HTML5
+                    </span>
+
+                    <span class="px-3 py-1 bg-purple-50 text-purple-600 text-xs font-semibold rounded-full border border-purple-100 transition-colors hover:bg-purple-100 cursor-pointer">
+                        Tailwind CSS
+                    </span>
+
+                    <span class="px-3 py-1 bg-amber-50 text-amber-600 text-xs font-semibold rounded-full border border-amber-100 transition-colors hover:bg-amber-100 cursor-pointer">
+                        JavaScript
+                    </span>
+
+                    <span class="px-3 py-1 bg-emerald-50 text-emerald-600 text-xs font-semibold rounded-full border border-emerald-100 transition-colors hover:bg-emerald-100 cursor-pointer">
+                        Git / GitHub
+                    </span>
+
+                </div>
+            </div>
+
+            <!-- Botón -->
+            <div class="mt-8 flex gap-3">
+
+                <a href="portafolio.html"
+                   class="flex-1 px-4 py-2.5 bg-gradient-to-r from-marca-gradientStart to-marca-gradientEnd text-white text-sm font-medium rounded-xl hover:opacity-90 shadow-md shadow-indigo-200 hover:shadow-indigo-300 transition-all text-center">
+
+                    Ver Portafolio
+
+                </a>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Script modo oscuro -->
+    <script>
+
+        const boton = document.getElementById("theme-toggle");
+
+        if(localStorage.getItem("theme") === "dark"){
+
+            document.documentElement.classList.add("dark");
+            boton.textContent = "☀️";
+
+        }
+
+        boton.addEventListener("click", () => {
+
+            document.documentElement.classList.toggle("dark");
+
+            if(document.documentElement.classList.contains("dark")){
+
+                localStorage.setItem("theme", "dark");
+                boton.textContent = "☀️";
+
+            }else{
+
+                localStorage.setItem("theme", "light");
+                boton.textContent = "🌙";
+
+            }
+
+        });
+
+    </script>
+
 </body>
 </html>
