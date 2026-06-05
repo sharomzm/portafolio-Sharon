@@ -145,6 +145,16 @@ max-width:700px;
 font-size:1.1rem;
 margin-bottom:12px;
 }
+/* Botón para menú móvil */
+
+.menu-toggle{
+    display:none;
+    background:none;
+    border:none;
+    font-size:2rem;
+    cursor:pointer;
+    color:var(--color-titulos);
+}
 
 /* =========================
 TITULOS
@@ -465,7 +475,9 @@ section{
     padding:120px 8%;
 }
 }
-
+/* =========================
+FOTO DE PERFIL
+========================= */
 .foto img{
     width: 300px;
     height: 300px;
@@ -491,7 +503,7 @@ DATOS PERSONALES
     display:grid;
 
     grid-template-columns:
-    repeat(auto-fit,minmax(110px,1fr)); /* Ajusta el número de columnas según el espacio disponible */
+    repeat(auto-fit,minmax(280px,1fr)); /* Ajusta el número de columnas según el espacio disponible */
 
     gap:20px; /* Espacio entre las tarjetas */
 }
@@ -528,7 +540,7 @@ DATOS PERSONALES
     display:grid;
 
     grid-template-columns:
-    repeat(auto-fit,minmax(110px,1fr));
+    repeat(auto-fit,minmax(280px,1fr));
 
     gap:20px;
 
@@ -610,36 +622,47 @@ body.dark-mode #contacto{
     background:#2B2234;
 }
 
+/* Tarjetas */
 body.dark-mode article,
 body.dark-mode .dato-card,
 body.dark-mode #habilidades li,
 body.dark-mode form{
 
-    background:#30253A;
+    background:#352A40;
 
     color:#F8F4F7;
 
-    border:1px solid #4A3A57;
+    border:1px solid #5A476A;
 
     box-shadow:
     0 10px 25px rgba(0,0,0,0.35);
 }
 
+/* Títulos */
 body.dark-mode h1,
 body.dark-mode h2{
-
     color:#FF9CCB;
 }
 
 body.dark-mode h3{
-
     color:#D8B4FE;
 }
 
+/* Texto */
 body.dark-mode p,
 body.dark-mode li{
+    color:#c137da;
+}
 
-    color:#E5DCE5;
+/* Párrafos específicos */
+body.dark-mode #sobre-mi p,
+body.dark-mode #proyectos p{
+    color:#ff00c8;
+}
+
+/* Formulario */
+body.dark-mode label{
+    color:#FFD6E7;
 }
 
 body.dark-mode input,
@@ -661,6 +684,7 @@ body.dark-mode textarea:focus{
     0 0 10px rgba(255,156,203,0.4);
 }
 
+/* Habilidades */
 body.dark-mode #habilidades li:hover{
 
     background:#FF9CCB;
@@ -670,6 +694,12 @@ body.dark-mode #habilidades li:hover{
     transform:scale(1.05);
 }
 
+body.dark-mode #habilidades li:hover,
+body.dark-mode #habilidades li:hover *{
+    color:#18141F;
+}
+
+/* Botones */
 body.dark-mode button,
 body.dark-mode #proyectos a{
 
@@ -682,15 +712,112 @@ body.dark-mode #proyectos a{
     color:#18141F;
 }
 
-body.dark-mode footer{
+body.dark-mode #modo-oscuro{
+    box-shadow:0 0 15px rgba(255,156,203,0.5);
+}
 
+/* Footer */
+body.dark-mode footer{
     background:#120E17;
 }
 
+body.dark-mode .redes-sociales a{
+    color:#FFB6D9;
+}
+
+body.dark-mode .redes-sociales a:hover{
+    color:#FFD6E7;
+}
+
+/* Foto de perfil */
 body.dark-mode .foto img{
 
     border:4px solid #FF9CCB;
 
     box-shadow:
     0 0 20px rgba(255,156,203,0.4);
+}
+
+/* =========================
+CELULARES PEQUEÑOS
+========================= */
+
+@media (max-width: 480px){
+
+    #inicio h1{
+        font-size:2rem;
+    }
+
+    h2{
+        font-size:1.8rem;
+    }
+
+    section{
+        padding:100px 5%;
+    }
+
+    .foto img{
+        width:170px;
+        height:170px;
+    }
+
+}
+
+
+@media (max-width:768px){
+
+    #inicio{
+        flex-direction:column;
+    }
+
+    .datos-grid{
+        grid-template-columns:1fr;
+    }
+}
+/* =========================
+RESPONSIVE
+========================= */
+@media (max-width:768px){
+
+    .menu-toggle{
+        display:block;
+    }
+
+    nav{
+        position:relative;
+    }
+
+    nav ul{
+        display:none;
+        flex-direction:column;
+        position:absolute;
+        top:80px;
+        left:0;
+        width:100%;
+        background:white;
+        padding:20px;
+        gap:15px;
+        box-shadow:var(--sombra-suave);
+    }
+
+    nav ul.active{
+        display:flex;
+    }
+
+    #inicio{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .datos-grid{
+        grid-template-columns:1fr;
+    }
+}
+
+body.dark-mode nav ul{
+    background:#241C2B;
+}
+
+body.dark-mode .menu-toggle{
+    color:#FF9CCB;
 }
