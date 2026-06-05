@@ -151,7 +151,7 @@ margin-bottom:12px;
     display:none;
     background:none;
     border:none;
-    font-size:2rem;
+    font-size:1rem;
     cursor:pointer;
     color:var(--color-titulos);
 }
