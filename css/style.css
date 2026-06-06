@@ -706,7 +706,7 @@ body.dark-mode #proyectos a{
     background:linear-gradient(
         90deg,
         #FF9CCB,
-        #D8B4FE
+        #FFD6E7
     );
 
     color:#18141F;
@@ -821,3 +821,18 @@ body.dark-mode nav ul{
 body.dark-mode .menu-toggle{
     color:#FF9CCB;
 }
+
+#modo-oscuro{
+    background: transparent;
+    border: none;
+    color: var(--color-titulos);
+    cursor: pointer;
+    padding: 8px;
+}
+
+body.dark-mode #modo-oscuro{
+    background: transparent;
+    color: #FF9CCB;
+    box-shadow: none;
+}
+
