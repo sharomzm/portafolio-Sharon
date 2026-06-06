@@ -159,7 +159,9 @@
         <!-- Seccion de contacto -->
         <section id="contacto">
             <h2>Contacto</h2>
-            <form action="#" method="POST">
+
+            <form id="contact-form" action="#" method="POST">
+
                 <label for="nombre">Nombre:</label>
                 <input type="text" id="nombre" name="nombre" required>
 
@@ -170,8 +172,9 @@
                 <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
 
                 <button type="submit">Enviar</button>
+
             </form>
-        </section>  
+        </section> 
     </main>
 
     <!--    Pie de pagina (informacion de copyright y redes sociales)  -->
@@ -191,6 +194,7 @@
         }
 
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
